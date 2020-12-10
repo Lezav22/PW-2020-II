@@ -1,0 +1,72 @@
+/** --------------------------- ESTILOS GENERALES --------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200;300;400;500&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/Background.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+}
+
+.cod-container {
+    margin: auto;
+	
+    position: absolute;
+    
+    right: 15%;
+    
+    width: 480px;
+    max-width: 700px;
+    
+	border: 1px solid #303030;
+    border-radius: 25px;
+	
+    overflow: hidden;
+    
+    padding: 0px;
+	
+    background: rgba(0,0,0,.95);
+    
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,0.3);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,0.3);
+    box-shadow: 10px 10px 5px 0px rgba(30,30,30,0.3);
+
+}
+
+.form-subtittle, .rol {
+    margin: auto;
+    position: relative;
+    display: grid;
+    font-weight: normal;
+    font-family: 'Arima Madurai', cursive;
+    color: #FF4000;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+/** EFECTO FORMUARIO */
+
+.form-content {
+    display: none;
+}
+
+.form-content:nth-child(2) {
+    display: block;
+}

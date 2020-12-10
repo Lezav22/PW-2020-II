@@ -1,0 +1,66 @@
+/** --------------------------- ESTILOS GENERALES --------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200;300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Arima Madurai';
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 70px;
+    
+    background: rgba(0,0,0,.95);
+    border-bottom: 2px solid #FF4000;
+    display: flex;
+}
+
+.contenedor-menu {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+/*  TABLET
+@media screen and (max-width:750px){
+    .tittle {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    .menu_link {
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+}*/
+
+/* SMARTPHONE
+@media screen and (max-width:350px){
+    .menu {
+        display: block;
+    }
+}
+

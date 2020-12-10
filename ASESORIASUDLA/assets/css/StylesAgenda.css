@@ -1,0 +1,22 @@
+.contenedor-agenda {
+    position: absolute !important;
+    margin: auto !important;
+    width: 100% !important;
+    height: 100vh !important;
+    top: 70px !important;
+    background: rgba(30,30,30,.4) !important;
+}
+
+.info-sesion {
+    margin-bottom: 10px !important;
+    background: #FF4000 !important;
+    font-family: 'Arima Madurai' !important;
+    color: #FFF !important;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%) !important;
+}
+
+.agenda {
+    
+    
+    
+}

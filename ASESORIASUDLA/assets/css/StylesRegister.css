@@ -1,0 +1,123 @@
+/** --------------------------- ESTILOS DEL FORMULARIO REGISTRO --------------------------- */
+
+.form-register {
+    padding: 10px 10px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.contenedor-input-register , .contenedor-combobox, .contenedor-radiobtn {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    max-width: 550px;
+    position: relative;
+    margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+}
+
+.form-input-register {
+    margin: auto;
+    background: rgba(0,0,0,0);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ff4000;
+    width: 49.3%;
+    padding: 10px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Arima Madurai', cursive;
+    text-align: center;
+}
+
+#correo, #pass-register, #telefono {
+    width: 100%;
+}
+
+.form-label-register {
+    position: absolute;
+    margin: auto;
+    padding: 15px;
+    color: rgba(255,255,255, .5);
+    font-size: 14px;
+    cursor: text;
+    transition: all .3s ease;
+    font-family: 'Arima Madurai', cursive;
+}
+
+.form-label-box, .form-label-radiobtn{
+    margin: auto;
+    background: rgba(0,0,0,0);
+    width: 49.4%;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Arima Madurai', cursive;
+    position: relative;
+}
+
+.form-box {
+    margin: auto;
+    background: rgba(0,0,0,0);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ff4000;
+    width: 49.4%;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Arima Madurai', cursive;
+}
+
+option {
+    background: rgba(0,0,0,.9);
+}
+
+
+.btn-register { /** Boton */
+    margin-top: 25px;
+    width: 100%;
+    font-family: 'Arima Madurai', cursive;
+    outline: none;
+    font-size: 15px;
+    background: #303030;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+    margin-bottom: 20px;
+}
+
+.btn-register:hover {
+    color: #fff;
+    background: #ff4000;
+}
+
+.btn-close-register{
+    font-size: 15px;
+    outline: none;
+    text-align: center;
+    margin: auto;
+    padding: 10px 15px;
+    padding-bottom: 0px;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #ff4000;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn-close-register:hover {
+    background: #ff4000;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}

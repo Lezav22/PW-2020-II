@@ -1,0 +1,131 @@
+.icon-bars {
+    /* LABEL */
+    margin-top: 10px;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.tittle {
+    font-size: 15px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    font-family: 'Arima Madurai';
+    padding: 0px 15px;
+    color: #fff;
+}
+
+.logo {
+    padding: 5px;
+}
+
+.nav-menu {
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+
+    background: #eb5757;
+    background: -webkit-linear-gradient(top, #FF4000, #000000);
+    background: -o-linear-gradient(top, #FF4000, #000000);
+    background: linear-gradient(to bottom, #FF4000, #000000);
+
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.menu-link {
+    display: block;
+    text-decoration: none;
+    font-family: 'Arima Madurai';
+    font-size: 18px;
+    color: #FFF;
+    height: 70px;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 64, 0, 0.4);
+    text-align: center;
+}
+
+.menu-link:active {
+    background: rgba(0, 0, 0);
+}
+
+.menu {
+    color: transparent;
+}
+
+.menu-bar {
+    display: none;
+}
+
+.menu-bar:checked ~ .nav-menu {
+    transform: translateX(0%);
+
+}
+
+.menu-bar:checked ~ .icon-bars {
+    color: #FF4000;
+
+}
+
+span {
+    margin: auto;
+    text-align: center;
+    padding: 0px 5px 0;
+}
+
+/* ESTILO RESPOSIVE WEB */
+
+
+@media (min-width:1024px) {
+
+    .icon-bars {
+        display: none;
+    }
+
+    .contenedor-menu {
+        display: flex;
+        position: static;
+    }
+
+    .nav-menu {
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        background: transparent;
+        position: static;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menu-link {
+        height: auto;
+        border: none;
+    }
+
+    .menu-link:hover {
+        transition: all .3s ease-in-out;
+        margin: auto;
+        color: rgba(255, 64, 0);
+    }
+
+    .info-sesion {
+        width: 350px;
+    }
+
+
+}
+
+/* TAMAÑO TABLET */
+
+@media (min-width:765px) {
+
+    .info-sesion {
+        width: 350px;
+    }
+
+}
