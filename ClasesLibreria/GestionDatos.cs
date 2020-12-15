@@ -22,7 +22,7 @@ namespace ClasesLibreria
             this.conexion = Conexion.getConexion();
         }
 
-      public bool Registro(Persona persona)
+        public bool Registro(Persona persona)
         {
             string clave2 = Encrypt.GetMD5(persona.clave);
             bool agregar = false;
@@ -56,7 +56,7 @@ namespace ClasesLibreria
 
         }
 
-       public bool Login(Usuario usuario)
+        public bool Login(Usuario usuario)
         {
             string clave2 = Encrypt.GetMD5(usuario.clave);
             bool inicio = false;
@@ -117,11 +117,32 @@ namespace ClasesLibreria
                 return false;
             }
 
+        }
+
+        public string RecuperarPass(string email)
+        {
+            string clave = "";
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = conexion;
+            comando.CommandText = "Select password from usuario where email_udla=@email and estado='A'";
+            comando.Parameters.AddWithValue("@email", email);
+
+            //MySqlDataReader recuperar = comando.ExecuteReader();
+
+            using (var reader = comando.ExecuteReader())
+            {
+                clave = null;
+                while (reader.Read())
+                {
+                   
+                    //clave = reader.ToString();
+                    clave = reader["password"].ToString();
+                }
 
 
+            }
 
-
-
+            return clave;
         }
 
 

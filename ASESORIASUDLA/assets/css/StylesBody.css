@@ -3,12 +3,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200;300;400;500&display=swap');
 
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.labels {
+    BackColor ="#FF6600";
+    BorderColor ="#00CC00";
+    BorderStyle ="Solid";
+    Font-Bold ="True";
+    Font-Names ="Arial";
+    Font-Size ="10pt";
+    ForeColor ="White"
+}
+
+
+
+
+
 
 body {
     background: url(../img/Background.jpg);
@@ -25,27 +40,18 @@ body {
 
 .cod-container {
     margin: auto;
-	
     position: absolute;
-    
     right: 15%;
-    
     width: 480px;
     max-width: 700px;
-    
-	border: 1px solid #303030;
+    border: 1px solid #303030;
     border-radius: 25px;
-	
     overflow: hidden;
-    
     padding: 0px;
-	
     background: rgba(0,0,0,.95);
-    
     -webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,0.3);
     -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,0.3);
     box-shadow: 10px 10px 5px 0px rgba(30,30,30,0.3);
-
 }
 
 .form-subtittle, .rol {
@@ -67,6 +73,6 @@ body {
     display: none;
 }
 
-.form-content:nth-child(2) {
-    display: block;
-}
+    .form-content:nth-child(2) {
+        display: block;
+    }

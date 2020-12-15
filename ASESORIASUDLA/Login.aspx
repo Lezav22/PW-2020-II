@@ -42,7 +42,7 @@
 
                 <div class="contenedor-input">
                     <label for="user" class="form-label-log"><span class="icon-user"></span></label>
-                    <asp:TextBox ID="txtusuario" runat="server" class="form-input-login" required="true" autocomplete="off"></asp:TextBox>
+                    <asp:TextBox ID="txtusuario" type="email" runat="server" class="form-input-login" required="true" autocomplete="off"></asp:TextBox>
                     <label for="user" class="label-text">Usuario</label>
                 </div>
                 
@@ -54,7 +54,7 @@
 
                 <asp:Button CssClass="btn-login" Text="Iniciar Sesión" runat="server" ID="btnIniciar" OnClick="btnIniciar_Click"></asp:Button> 
 
-                <asp:Label ID="lbpruebalogin" runat="server"></asp:Label>
+                <asp:Label ID="lbpruebalogin" CssClass="form-subtittle" runat="server"></asp:Label>
 
                  <div class="contenedor-opciones">
                     <p>¿No tienes cuenta?<a class="option alt-form" id="btnReg" href="Registro.aspx">Regístrate</a></p>

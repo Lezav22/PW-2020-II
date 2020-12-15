@@ -37,7 +37,7 @@
                     <label for="user" class="label-text">Correo Institucional</label>
                 </div>
                 <asp:Button ID="btnEnviar" CssClass="btn-login" Text="Enviar" runat="server" OnClick="btnEnviar_Click"></asp:Button>
-                <asp:Label ID="lbpruebarecover" runat="server"></asp:Label>
+                <asp:Label ID="lbpruebarecover" CssClass="form-subtittle" runat="server"></asp:Label>
             </form>
         </div>
     </div>

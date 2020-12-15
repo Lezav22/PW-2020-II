@@ -24,6 +24,15 @@ namespace ASESORIASUDLA
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
+        /// Control LbSession.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbSession;
+
+        /// <summary>
         /// Control BtnCerrarSesion.
         /// </summary>
         /// <remarks>

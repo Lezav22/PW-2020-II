@@ -429,11 +429,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #F56546;
+    color: #E78158;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    font: italic bold 70px Georgia, Serif;
+    text-shadow: -4px 3px 0 #34d16e, -14px 7px 0 #0a0e27;
 }
 
 #hero h2 {

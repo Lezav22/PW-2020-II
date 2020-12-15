@@ -26,39 +26,48 @@ namespace ASESORIASUDLA
             {
                 Response.Redirect("Index.aspx");
             }
-
-
             MySqlCommand comando = new MySqlCommand();
             comando.Connection = objGestion.conexion;
             comando.CommandText = "select * from tipo_id";
 
-            using (var reader = comando.ExecuteReader())
-            {
-                Drop_tipo_id.DataSource = reader;
-                Drop_tipo_id.DataValueField = "idtipo_id";
-                Drop_tipo_id.DataTextField = "tipo";
-                Drop_tipo_id.DataBind();
-
-            }
-
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = objGestion.conexion;
-            cmd.CommandText = "select idrol, nombre from rol";
+            cmd.CommandText = "select idrol, nombre from rol WHERE ESTADO='A' LIMIT 2";
 
-            using (var lectura = cmd.ExecuteReader())
+
+            if (!IsPostBack)
             {
-                Drop_rol.DataSource = lectura;
-                Drop_rol.DataValueField = "idrol";
-                Drop_rol.DataTextField = "nombre";
-                Drop_rol.DataBind();
-                //lbprueba.Text= Drop_tipo_id.SelectedItem.ToString();
-                lbprueba.Text = Drop_rol.SelectedValue;
+               
+
+                using (var reader = comando.ExecuteReader())
+                {
+                    Drop_tipo_id.DataSource = reader;
+                    Drop_tipo_id.DataValueField = "idtipo_id";
+                    Drop_tipo_id.DataTextField = "tipo";
+                    Drop_tipo_id.DataBind();
+
+                }
+
+                
+
+                using (var lectura = cmd.ExecuteReader())
+                {
+                    Drop_rol.DataSource = lectura;
+                    Drop_rol.DataValueField = "idrol";
+                    Drop_rol.DataTextField = "nombre";
+                    Drop_rol.DataBind();
+                    //lbprueba.Text= Drop_tipo_id.SelectedItem.ToString();
+                    lbprueba.Text = Drop_rol.SelectedValue;
+                }
             }
+
+            
 
         }
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
+
             Persona persona = new Persona();
             EnviarMail m = new EnviarMail();
             persona.nombre1 = txtnombre1.Text;
@@ -68,7 +77,7 @@ namespace ASESORIASUDLA
             persona.identificacion = txtidentificacion.Text;
             persona.email = txtemail.Text;
             persona.clave = txtclave.Text;
-            persona.usuario = txtidentificacion.Text;
+            persona.usuario = txtemail.Text;
             persona.tipo_id = Convert.ToInt32(Drop_tipo_id.SelectedValue);
             persona.estado = "A";
             persona.rol = Convert.ToInt32(Drop_rol.SelectedValue);
@@ -86,7 +95,7 @@ namespace ASESORIASUDLA
                 {
                     lbprueba.Text = "USUARIO REGISTRADO";
                     limpiar();
-                    if (m.MailRegistro(persona.email, persona.identificacion))
+                    if (m.MailRegistro(persona.email, persona.email))
                     {
                         lbprueba.Text = "Todo Ok! Sus credenciales fueron enviadas al email registrado.";
                     }
@@ -102,6 +111,8 @@ namespace ASESORIASUDLA
         }
 
 
+
+        
 
         private void limpiar()
         {

@@ -11,12 +11,15 @@ namespace ASESORIASUDLA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           /* if (Session["usuario"] == null)
+            //if (Session["usuario"] == null)
+            //{
+            //    Response.Redirect("Login.aspx");
 
-            {
-                Response.Redirect("Login.aspx");
-
-            }*/
+            //}
+            //else
+            //{
+            //    LbSession.Text = Session["usuario"].ToString();
+            //}
         }
 
         protected void BtnCerrarSesion_Click(object sender, EventArgs e)

@@ -14,17 +14,16 @@ namespace ASESORIASUDLA
 {
     public partial class Login : System.Web.UI.Page
     {
-
+        
         GestionDatos objGestion = new GestionDatos();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
-
-            if (Session["usuario"] != null)
+            if (Session["rol"] != null)
             {
                 Response.Redirect("Index.aspx");
             }
+           
 
 
         }
@@ -50,10 +49,9 @@ namespace ASESORIASUDLA
 
             }
 
-
-
         }
 
 
     }
 }
+
